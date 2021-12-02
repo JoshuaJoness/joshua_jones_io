@@ -1,31 +1,42 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
-  </Layout>
-)
+import About from "../components/About"
+import CalorieCam from "../components/CalorieCam"
+import ZenChat from "../components/ZenChat"
+import Contact from "../components/Contact"
+
+const IndexPage = () => {
+  const [windowWidth, setWindowWidth] = useState(Infinity)
+  const [mobile, setMobile] = useState(false)
+
+  useEffect(() => {
+    setWindowWidth(window.visualViewport.width)
+  }, [typeof window !== "undefined" ? window.visualViewport.width : null])
+
+  useEffect(() => {
+    if (windowWidth <= 870) setMobile(true)
+  }, [windowWidth])
+
+  return (
+    <Layout>
+      <Seo title="Home" />
+      <div
+        id="home"
+        className="image"
+        style={mobile ? { backgroundPosition: "unset" } : {}}
+      />
+      <About mobile={mobile} />
+      <CalorieCam mobile={mobile} />
+      <ZenChat mobile={mobile} />
+      <div className="imageTwo" />
+      <Contact mobile={mobile} />
+    </Layout>
+  )
+}
 
 export default IndexPage

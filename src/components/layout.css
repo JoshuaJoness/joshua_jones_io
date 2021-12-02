@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
+  background-color: #333;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -53,6 +54,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 a:active,
 a:hover {
@@ -594,4 +596,238 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/* custom */
+
+.image {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/mountain.jpg');
+  z-index: -1;
+}
+
+.title {
+  text-decoration: none;
+  font-size: 96px;
+  text-transform: capitalize;
+  display: block;
+  text-align: center;
+  font-family: CreativeVintageDraft, sans-serif;
+}
+
+.titleMobile {
+  text-decoration: none;
+  font-size: 50px;
+  text-transform: capitalize;
+  display: block;
+  text-align: center;
+  font-family: CreativeVintageDraft, sans-serif;
+}
+
+.description {
+  font-size: 32px;
+  width: 40vw;
+  padding-right: 10%;
+  line-height: 2;
+}
+
+.descriptionMobile {
+  font-size: 22px;
+  padding-right: 10%;
+  line-height: 2;
+}
+
+/* About */
+
+.aboutContainer {
+  padding: 25px 100px;
+  font-size: 32px;
+  font-family: CreativeVintageDraft, sans-serif;
+  width: 60vw;
+  margin: 100vh auto 0 auto;
+  line-height: 2;
+}
+
+.aboutContainerMobile {
+  margin-top: 100vh;
+  color: grey;
+  padding-top: 60px;
+  font-family: CreativeVintageDraft, sans-serif;
+}
+
+.aboutHighlight {
+  color: #fff;
+}
+
+/* Calorie Cam */
+
+.calorieCamContainerMobile {
+  background-color: grey;
+  color: #fff;
+  font-family: CreativeVintageDraft, sans-serif;
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.calorie-cam-link-mobile {
+    word-break: break-word;
+    font-size: 18px;
+    color: pink;
+}
+
+.calorie-cam-link-mobile:hover {
+  color: #333;
+}
+
+.calorieCamContainer {
+  background-color: grey;
+  padding: 100px;
+  color: #fff;
+  font-family: CreativeVintageDraft, sans-serif;
+}
+
+.calorie-cam-link {
+  word-break: break-word;
+  font-size: 24px;
+  color: pink;
+}
+
+.calorie-cam-link:hover {
+  color: #333;
+  opacity: 0.5;
+}
+
+.calorieCamHighlight {
+  color: pink;
+}
+
+/* Zen Chat */
+.zenChatContainer {
+  background-color: white;
+  font-family: CreativeVintageDraft, sans-serif;
+}
+
+.zen-chat-link {
+  word-break: break-word;
+      font-size: 24px;
+      color: grey;
+}
+
+.zen-chat-link:hover {
+  color: pink;
+}
+
+.zenChatContainerMobile {
+  background-color: white;
+  font-family: CreativeVintageDraft, sans-serif;
+}
+
+.zen-chat-link-mobile {
+    word-break: break-word;
+    font-size: 18px;
+    color: grey;
+}
+
+.zen-chat-link-mobile:hover {
+  color: pink;
+}
+
+.imageTwo {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/leap_of_faith.jpg');
+  z-index: -1;
+}
+
+.contactList {
+  line-height: 1.5;
+  text-align: start;
+  margin-left: 25px;
+}
+
+.contact-list-li {
+  list-style: none;
+  color: lightgrey;
+}
+
+.contactListMobile {
+  line-height: 1.5;
+  text-align: start;
+}
+
+.contact-list-link {
+  text-decoration: none;
+  word-break: break-word;
+  font-size: 18px;
+  color: grey;
+}
+
+.contact-list-link:hover {
+  color: pink;
+}
+
+/* Nav */
+.container {
+  list-style-type: none;
+  position: absolute;
+  top: 100px;
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: space-between;
+}
+
+.containerMobile {
+  list-style-type: none;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: space-between;
+  margin: 0;
+  background-color: #333;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 20px 50px;
+  z-index: 9999;
+  color: pink;
+  font-family: CreativeVintageDraft;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+  font-size: 32px;
+  text-transform: capitalize;
+  color: #67697C;
+  font-family: 'FabulousScript-Bold', sans-serif;
+}
+
+.link:hover {
+  color: pink;
+}
+
+.joshuaJones {
+  text-decoration: none;
+  font-size: 96px;
+  text-transform: capitalize;
+  color: #67697C;
+  font-family: CreativeVintageDraft, sans-serif;
+  margin: 50px;
+}
+
+.joshuaJones:hover {
+  color: pink;
+}
+
+.nav-link {
+  color: pink;
 }
